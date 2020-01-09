@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+</head>
+<body>
+       <script>
+           classmate=new Object();
+           classmate.name="bbb";
+           classmate.age="30";
+           people={name:"aaa",age:"30"};
+           document.write(people.age);
+       </script>
+<script>
+    function our(name,age) {
+             this._name=name;
+             this._age=age;
+    }
+    hhh=new our("wxy",30);
+    document.write(hhh._name);
+</script>
+</body>
+</html>

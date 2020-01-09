@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="onmouse.css" type="text/css">
+</head>
+<body onload="f()" onunload="g()">
+  <div onmouseover="a(this)" onmouseout="b(this)"></div>
+<script>
+    function a(bbb) {
+      bbb.innerHTML="<p style='color: chartreuse' align='center'>来了，老弟</p>";
+      bbb.style.backgroundColor="red";
+    }
+    function b(bbb) {
+        bbb.innerHTML="<p style='color: #4ec5ff' align='center'>走了，老弟</p>";
+    }
+
+</script>
+  <br/>
+用户名:<input type="text" onchange="c()"><br/>
+ 密码:<input type="text" onchange="d(this)" onfocus="e(this)">
+<script>
+    function c() {
+         alert("是否保存");
+    }
+    function d(aaaaa) {
+        aaaaa.style.color="red";
+    }
+    function e(bbb) {
+        bbb.style.color="blue";
+    }
+    function f() {
+        alert("欢迎进入");
+    }
+    function g() {
+        alert("欢迎再次到来");
+    }
+
+</script>
+</body>
+</html>

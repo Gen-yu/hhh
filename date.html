@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date</title>
+    <link rel="stylesheet" href="date.css" type="text/css">
+</head>
+<body onload="time()">
+<p id="a" style="color: fuchsia" ></p>
+<script>
+    function time() {
+        today = new Date();
+        h = today.getHours();
+        m = today.getMinutes();
+        s = today.getSeconds();
+        h = change(h);
+        m = change(m);
+        s = change(s);
+        document.getElementById("a").innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout("time()",1000);
+    }
+
+    function change(i) {
+        if (i < 10)
+            i = "0" + i;
+        return i;
+    }
+</script>
+</body>
+</html>

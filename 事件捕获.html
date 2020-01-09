@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>捕获</title>
+</head>
+<body id="aaa">
+<div id="bbb"><button id="ccc">按钮</button></div>
+
+<script>
+ document.getElementById("aaa").addEventListener("click",a,false);
+ document.getElementById("bbb").addEventListener("click",b,false);
+ document.getElementById("ccc").addEventListener("click",c,false);
+
+    function a() {
+        alert("body");
+    }
+    function b() {
+        alert("div");
+    }
+    function c() {
+        alert("button");
+        event.stopPropagation();
+    }
+</script>
+</body>
+</html>
